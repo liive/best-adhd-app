@@ -7,7 +7,7 @@ interface AppListProps {
 }
 
 export function AppList({ apps }: AppListProps) {
-  const sortedApps = [...apps].sort((a, b) => b.rating - a.rating);
+  const sortedApps = [...apps].sort((a, b) => a.rating - b.rating);
 
   return (
     <div className="relative space-y-6">

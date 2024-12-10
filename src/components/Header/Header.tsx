@@ -8,7 +8,7 @@ export function Header() {
           <a href="#" className="text-indigo-600 hover:text-indigo-700 font-semibold">
             Best apps
           </a>
-          <span className="text-gray-500">23 min read</span>
+          <span className="text-gray-500">Comprehensive Guide</span>
         </div>
         
         <h1 className="mt-16 text-[64px] font-bold text-gray-900 leading-tight tracking-tight mx-auto">
@@ -16,7 +16,10 @@ export function Header() {
         </h1>
         
         <div className="mt-8 text-gray-600">
-          <span>December 2, 2024</span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            Regularly updated with latest features and pricing
+          </span>
         </div>
 
         <div className="mt-12 relative aspect-[2/1] max-w-4xl mx-auto overflow-hidden rounded-xl">
