@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-domain.com/sitemap.xml
+# Optimize crawling
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://bestadhdapp.com/sitemap.xml
