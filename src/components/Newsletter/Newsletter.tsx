@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { Mail, ArrowRight, CheckCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../../config/emailjs';
 
-interface EmailJSResponse {
-  status: number;
-  text: string;
-}
+type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
 
 export function Newsletter() {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<SubmitStatus>('idle');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
 
@@ -20,14 +18,14 @@ export function Newsletter() {
     
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
         {
           to_email: 'tablivebusiness@gmail.com',
           from_email: email,
           message: `New subscription from: ${email}`,
         },
-        'YOUR_PUBLIC_KEY'
+        EMAILJS_CONFIG.PUBLIC_KEY
       );
 
       setStatus('success');
