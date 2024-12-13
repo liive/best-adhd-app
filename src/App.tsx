@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { AppList } from './components/AppList/AppList';
-import { Newsletter } from './components/Newsletter/Newsletter';
+import { Newsletter } from './components/Newsletter/Newsletter.tsx';
 import { apps } from './data/apps';
 
 function App() {

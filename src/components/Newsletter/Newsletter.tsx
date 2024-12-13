@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Mail, ArrowRight, CheckCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
+interface EmailJSResponse {
+  status: number;
+  text: string;
+}
+
 export function Newsletter() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -14,16 +19,15 @@ export function Newsletter() {
     setStatus('loading');
     
     try {
-      // Replace these with your EmailJS credentials
       await emailjs.send(
-        'service_vl1sqex', // Create a Gmail service in EmailJS
-        'template_fnrzpea', // Create an email template in EmailJS
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
         {
           to_email: 'tablivebusiness@gmail.com',
           from_email: email,
           message: `New subscription from: ${email}`,
         },
-        'Sn0Y-BRN3jRID-flW' // Your EmailJS public key
+        'YOUR_PUBLIC_KEY'
       );
 
       setStatus('success');
