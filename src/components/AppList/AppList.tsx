@@ -7,13 +7,17 @@ interface AppListProps {
 }
 
 export function AppList({ apps }: AppListProps) {
+  // Sort by rating in ascending order (lowest to highest)
   const sortedApps = [...apps].sort((a, b) => a.rating - b.rating);
-
+  
   return (
     <div className="relative space-y-6">
-      {sortedApps.slice(0, 10).map((app, index) => (
+      {sortedApps.map((app, index) => (
         <div key={index} className="relative pl-6">
-          <AppCard app={app} rank={10 - index} />
+          <AppCard 
+            app={app} 
+            rank={sortedApps.length - index} // This will make the highest rated app #1
+          />
         </div>
       ))}
     </div>
