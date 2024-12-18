@@ -1,7 +1,5 @@
-import { EmailJSConfig } from '../types/emailjs';
-
-export const EMAILJS_CONFIG: EmailJSConfig = {
-  SERVICE_ID: 'YOUR_SERVICE_ID',    // Replace with your actual Service ID from EmailJS
-  TEMPLATE_ID: 'YOUR_TEMPLATE_ID',  // Replace with your actual Template ID from EmailJS
-  PUBLIC_KEY: 'YOUR_PUBLIC_KEY'     // Replace with your actual Public Key from EmailJS
+export const EMAILJS_CONFIG = {
+  SERVICE_ID: 'service_vl1sqex',
+  TEMPLATE_ID: 'template_fnrzpea',
+  PUBLIC_KEY: 'Sn0Y-BRN3jRID-flW'  // This is a placeholder - you need to replace with your actual EmailJS public key
 };

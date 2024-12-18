@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, ArrowRight, CheckCircle } from 'lucide-react';
+import { Mail, ArrowRight, CheckCircle, AlertCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../../config/emailjs';
 
@@ -15,16 +15,19 @@ export function Newsletter() {
     if (!email) return;
 
     setStatus('loading');
+    setMessage('');
     
     try {
+      const templateParams = {
+        to_email: email,
+        from_name: 'BestADHDApp',
+        message: `New subscription request from: ${email}`,
+      };
+
       await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
-        {
-          to_email: 'tablivebusiness@gmail.com',
-          from_email: email,
-          message: `New subscription from: ${email}`,
-        },
+        templateParams,
         EMAILJS_CONFIG.PUBLIC_KEY
       );
 
@@ -32,8 +35,9 @@ export function Newsletter() {
       setMessage('Thanks for subscribing! We\'ll keep you updated.');
       setEmail('');
     } catch (error) {
+      console.error('Newsletter subscription error:', error);
       setStatus('error');
-      setMessage('Something went wrong. Please try again.');
+      setMessage('Something went wrong. Please try again later.');
     }
   };
 
@@ -52,16 +56,23 @@ export function Newsletter() {
 
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="flex flex-col sm:flex-row gap-2">
-            <div className="flex-grow">
+            <div className="flex-grow relative">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full px-3 py-2 text-sm rounded-md border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 transition-colors"
+                className={`w-full px-3 py-2 text-sm rounded-md border transition-colors ${
+                  status === 'error' 
+                    ? 'border-red-300 focus:ring-red-200 focus:border-red-400' 
+                    : 'border-gray-200 focus:ring-gray-200 focus:border-gray-300'
+                }`}
                 disabled={status === 'loading' || status === 'success'}
                 required
               />
+              {status === 'error' && (
+                <AlertCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-red-500" />
+              )}
             </div>
             <button
               type="submit"
@@ -70,7 +81,7 @@ export function Newsletter() {
             >
               {status === 'loading' ? (
                 <span className="inline-flex items-center">
-                  <svg className="animate-spin -ml-1 mr-2 h-3 w-3 text-white" fill="none" viewBox="0 0 24 24">
+                  <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                   </svg>
@@ -78,19 +89,21 @@ export function Newsletter() {
                 </span>
               ) : status === 'success' ? (
                 <span className="inline-flex items-center">
-                  <CheckCircle className="w-3 h-3 mr-1" />
+                  <CheckCircle className="w-4 h-4 mr-1" />
                   Subscribed
                 </span>
               ) : (
                 <span className="inline-flex items-center">
                   Subscribe
-                  <ArrowRight className="ml-1 w-3 h-3" />
+                  <ArrowRight className="ml-1 w-4 h-4" />
                 </span>
               )}
             </button>
           </div>
           {message && (
-            <p className={`mt-2 text-xs ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+            <p className={`mt-2 text-sm ${
+              status === 'success' ? 'text-green-600' : 'text-red-600'
+            }`}>
               {message}
             </p>
           )}
