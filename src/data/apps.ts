@@ -1,192 +1,192 @@
 export const apps = [
   {
-    name: "ADHD Brain Focus",
-    description: "Designed specifically for ADHD minds, this app understands how your brain works. It breaks tasks into dopamine-friendly chunks and uses color psychology to make organization feel natural and engaging.",
-    rating: 4.9,
-    price: "$4.99/month",
-    pros: [
-      "ADHD-specific task breakdown",
-      "Color-coded organization",
-      "Built-in reward system",
-      "Distraction blocker"
-    ],
-    cons: [
-      "Monthly subscription required",
-      "Limited free features",
-      "No desktop version"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-    appStoreUrl: "https://apps.apple.com/us/app/adhd-brain-focus"
-  },
-  {
-    name: "Mindful ADHD",
-    description: "A meditation and mindfulness app that actually works for ADHD brains. Short, engaging sessions with visual guides help calm racing thoughts without requiring lengthy focus periods.",
+    name: "Structured - Daily Planner",
+    description: "A visual daily planner that helps ADHD minds organize tasks with time-blocking and visual schedules. Perfect for those who need a clear, structured view of their day.",
     rating: 4.8,
-    price: "Free / $7.99/month",
+    price: "Free / $29.99/year",
     pros: [
-      "ADHD-friendly meditation",
-      "Visual breathing guides",
-      "Progress tracking",
-      "Anxiety management"
+      "Visual time-blocking",
+      "Calendar integration",
+      "Widget support",
+      "Clean, distraction-free design"
     ],
     cons: [
-      "Premium features locked",
-      "Limited offline access",
-      "Basic free version"
+      "Some features require subscription",
+      "Limited customization in free version",
+      "iOS only"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
-    appStoreUrl: "https://apps.apple.com/us/app/mindful-adhd"
+    imageUrl: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
+    appStoreUrl: "https://apps.apple.com/us/app/structured-daily-planner/id1499198946"
   },
   {
-    name: "Hyperfocus Timer",
-    description: "Harness your ADHD hyperfocus with this innovative timer. It adapts to your natural focus patterns and uses visual and audio cues to help you maintain productive work sessions.",
-    rating: 4.7,
-    price: "$2.99",
+    name: "Things 3",
+    description: "An elegant task manager that breaks down complex projects into manageable steps. Its clean interface and powerful features help ADHD users maintain focus and organization.",
+    rating: 4.9,
+    price: "$9.99",
     pros: [
-      "Adaptive focus tracking",
-      "Visual time perception",
-      "Custom work rhythms",
-      "Background noise options"
+      "Natural language input",
+      "Project organization",
+      "Quick entry features",
+      "Apple Watch support"
     ],
     cons: [
-      "Basic interface",
-      "Limited customization",
-      "No web version"
+      "One-time premium price",
+      "No free version",
+      "Apple ecosystem only"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f",
+    appStoreUrl: "https://apps.apple.com/us/app/things-3/id904237743"
+  },
+  {
+    name: "Forest",
+    description: "A unique focus app that gamifies productivity by growing virtual trees. Perfect for ADHD users who struggle with phone distractions and need visual motivation.",
+    rating: 4.8,
+    price: "Free / $1.99",
+    pros: [
+      "Gamified focus sessions",
+      "Real tree planting initiative",
+      "Friend challenges",
+      "Detailed statistics"
+    ],
+    cons: [
+      "Limited free features",
+      "Basic customization",
+      "No task management"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1502082553048-f009c37129b9",
+    appStoreUrl: "https://apps.apple.com/us/app/forest-focus-for-productivity/id866450515"
+  },
+  {
+    name: "Due",
+    description: "A reminders app that won't let you forget. With persistent notifications and quick rescheduling, it's ideal for ADHD users who struggle with time management.",
+    rating: 4.7,
+    price: "$7.99",
+    pros: [
+      "Persistent reminders",
+      "Quick rescheduling",
+      "Auto-snooze",
+      "Natural language input"
+    ],
+    cons: [
+      "One-time purchase required",
+      "No free version",
+      "Limited organization options"
     ],
     imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173",
-    appStoreUrl: "https://apps.apple.com/us/app/hyperfocus-timer"
+    appStoreUrl: "https://apps.apple.com/us/app/due-reminders-timers/id390017969"
   },
   {
-    name: "ADHD Planner Plus",
-    description: "Finally, a planner that gets ADHD. With flexible scheduling, visual task management, and built-in dopamine rewards, it makes staying organized feel less like a chore and more like a game.",
-    rating: 4.6,
-    price: "Free / $5.99/month",
+    name: "Mindnode 8",
+    description: "A powerful mind mapping tool that helps ADHD users brainstorm and organize thoughts visually. Perfect for capturing ideas and planning projects.",
+    rating: 4.8,
+    price: "Free / $2.49/month",
     pros: [
-      "Flexible scheduling",
-      "Visual task boards",
-      "Reward system",
-      "Location reminders"
+      "Visual brainstorming",
+      "Cross-device sync",
+      "Export options",
+      "Quick capture"
     ],
     cons: [
-      "Subscription needed",
+      "Monthly subscription for full features",
       "Learning curve",
-      "Heavy battery usage"
+      "Apple ecosystem only"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1517842645767-c639042777db",
-    appStoreUrl: "https://apps.apple.com/us/app/adhd-planner-plus"
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+    appStoreUrl: "https://apps.apple.com/us/app/mindnode-8-mind-map-outline/id1573875621"
   },
   {
-    name: "Focus Beats",
-    description: "Science-backed music designed for the ADHD brain. Different beats and rhythms help with focus, study, and creative work, while blocking out distracting background noise.",
-    rating: 4.5,
-    price: "$3.99/month",
+    name: "Streaks",
+    description: "Build and maintain daily habits with this Apple Design Award-winning app. Perfect for ADHD users who need help establishing routines.",
+    rating: 4.7,
+    price: "$4.99",
     pros: [
-      "ADHD-optimized sounds",
-      "Task-specific music",
-      "Focus tracking",
+      "Visual habit tracking",
+      "Flexible scheduling",
+      "Health app integration",
+      "Widget support"
+    ],
+    cons: [
+      "Limited free features",
+      "Maximum 12 habits",
+      "Basic statistics"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1484863137850-59afcfe05386",
+    appStoreUrl: "https://apps.apple.com/us/app/streaks/id963034692"
+  },
+  {
+    name: "Focus@Will",
+    description: "Scientifically optimized music to help ADHD minds focus. Uses neuroscience-based audio tracks to enhance concentration and productivity.",
+    rating: 4.6,
+    price: "Free / $49.99/year",
+    pros: [
+      "ADHD-specific music",
+      "Productivity tracking",
+      "Different sound types",
       "Offline mode"
     ],
     cons: [
-      "Monthly cost",
+      "Expensive subscription",
       "Limited free trial",
-      "No playlist export"
+      "No playlist customization"
     ],
     imageUrl: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
-    appStoreUrl: "https://apps.apple.com/us/app/focus-beats"
+    appStoreUrl: "https://apps.apple.com/us/app/focus-will/id638810714"
   },
   {
-    name: "Task Breaker",
-    description: "Overwhelmed by big projects? Task Breaker splits them into dopamine-friendly mini-tasks, making it easier for ADHD brains to start and maintain momentum.",
-    rating: 4.4,
-    price: "Free",
+    name: "Calm",
+    description: "A meditation and mindfulness app with specific programs for ADHD. Helps with emotional regulation and anxiety management through guided sessions.",
+    rating: 4.8,
+    price: "Free / $69.99/year",
     pros: [
-      "Smart task splitting",
-      "Progress visualization",
-      "Motivation boosters",
-      "Free forever"
+      "ADHD-specific meditations",
+      "Sleep stories",
+      "Breathing exercises",
+      "Progress tracking"
+    ],
+    cons: [
+      "Expensive premium version",
+      "Limited free content",
+      "Large app size"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+    appStoreUrl: "https://apps.apple.com/us/app/calm/id571800810"
+  },
+  {
+    name: "Todoist",
+    description: "A powerful task manager with natural language input and smart scheduling. Helps ADHD users organize tasks and projects efficiently.",
+    rating: 4.8,
+    price: "Free / $4/month",
+    pros: [
+      "Natural language input",
+      "Cross-platform sync",
+      "Collaboration features",
+      "Smart scheduling"
+    ],
+    cons: [
+      "Premium features require subscription",
+      "Complex for basic needs",
+      "Limited offline mode in free version"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1517842645767-c639042777db",
+    appStoreUrl: "https://apps.apple.com/us/app/todoist-to-do-list-tasks/id572688855"
+  },
+  {
+    name: "Bear Focus Timer",
+    description: "A minimalist Pomodoro timer with white noise features. Perfect for ADHD users who need help maintaining focus during work sessions.",
+    rating: 4.7,
+    price: "$1.99",
+    pros: [
+      "Minimalist design",
+      "White noise options",
+      "Focus statistics",
+      "Widget support"
     ],
     cons: [
       "Basic features only",
-      "No cloud sync",
-      "Ads present"
+      "No task integration",
+      "Limited customization"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
-    appStoreUrl: "https://apps.apple.com/us/app/task-breaker"
-  },
-  {
-    name: "Memory Assist",
-    description: "Never forget important tasks again. Using ADHD-friendly reminder patterns and visual cues, this app helps you remember everything from daily tasks to long-term goals.",
-    rating: 4.3,
-    price: "$1.99",
-    pros: [
-      "Smart reminders",
-      "Visual memory aids",
-      "Location triggers",
-      "One-time purchase"
-    ],
-    cons: [
-      "Simple interface",
-      "Limited features",
-      "No web version"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1586281380349-632531db7ed4",
-    appStoreUrl: "https://apps.apple.com/us/app/memory-assist"
-  },
-  {
-    name: "Routine Builder",
-    description: "Build lasting habits with an app that understands ADHD challenges. Uses gamification and immediate rewards to help establish and maintain daily routines.",
-    rating: 4.2,
-    price: "Free / $4.99/month",
-    pros: [
-      "Habit gamification",
-      "Flexible routines",
-      "Progress tracking",
-      "Community support"
-    ],
-    cons: [
-      "Premium features cost",
-      "Basic free version",
-      "No desktop app"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1484863137850-59afcfe05386",
-    appStoreUrl: "https://apps.apple.com/us/app/routine-builder"
-  },
-  {
-    name: "Study Flow",
-    description: "Transform studying with ADHD from a challenge into a strength. Uses active recall, spaced repetition, and visual learning techniques optimized for ADHD minds.",
-    rating: 4.1,
-    price: "$2.99/month",
-    pros: [
-      "ADHD learning methods",
-      "Interactive flashcards",
-      "Study analytics",
-      "Focus timer"
-    ],
-    cons: [
-      "Monthly subscription",
-      "Limited offline mode",
-      "No free version"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32",
-    appStoreUrl: "https://apps.apple.com/us/app/study-flow"
-  },
-  {
-    name: "Emotion Track",
-    description: "Understand and manage ADHD emotional dysregulation. Track mood patterns, identify triggers, and get personalized coping strategies based on your data.",
-    rating: 4.0,
-    price: "Free / $3.99/month",
-    pros: [
-      "Mood tracking",
-      "Coping strategies",
-      "Pattern analysis",
-      "Crisis resources"
-    ],
-    cons: [
-      "Premium features locked",
-      "Basic graphs in free",
-      "No export option"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88",
-    appStoreUrl: "https://apps.apple.com/us/app/emotion-track"
+    imageUrl: "https://images.unsplash.com/photo-1495364141860-b0d03eccd065",
+    appStoreUrl: "https://apps.apple.com/us/app/bear-focus-timer/id1328806990"
   }
 ];
