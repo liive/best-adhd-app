@@ -1,28 +1,30 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
-import { AppList } from './components/AppList/AppList';
-import { Newsletter } from './components/Newsletter/Newsletter';
-import { Introduction } from './components/ContentSections/Introduction';
-import { SelectionCriteria } from './components/ContentSections/SelectionCriteria';
-import { AppCategories } from './components/ContentSections/AppCategories';
-import { ResearchSection } from './components/ContentSections/ResearchSection';
-import { DetailedAnalysis } from './components/ContentSections/DetailedAnalysis';
-import { apps } from './data/apps';
+import { HomePage } from './pages/HomePage';
+import { AppReviewPage } from './pages/AppReviewPage/AppReviewPage';
+import { SymptomsPage } from './pages/SymptomsPage/SymptomsPage';
+import { ExpertInsightsPage } from './pages/ExpertInsightsPage';
+import { ResearchPage } from './pages/ResearchPage';
+import { ComparisonPage } from './pages/ComparisonPage/ComparisonPage';
+import { MedicalAnalysisPage } from './pages/MedicalAnalysis/MedicalAnalysisPage';
+import { TestimonialsPage } from './pages/TestimonialsPage/TestimonialsPage';
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <Introduction />
-        <SelectionCriteria />
-        <AppCategories />
-        <Newsletter />
-        <AppList apps={apps} />
-        <ResearchSection />
-        <DetailedAnalysis />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/app-reviews/:appName" element={<AppReviewPage />} />
+        <Route path="/adhd-symptoms-and-apps" element={<SymptomsPage />} />
+        <Route path="/expert-insights" element={<ExpertInsightsPage />} />
+        <Route path="/research" element={<ResearchPage />} />
+        <Route path="/comparison" element={<ComparisonPage />} />
+        <Route path="/medical-analysis" element={<MedicalAnalysisPage />} />
+        <Route path="/testimonials" element={<TestimonialsPage />} />
+      </Routes>
       <Footer />
     </div>
   );

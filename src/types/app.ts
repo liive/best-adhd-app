@@ -3,7 +3,6 @@ export interface App {
   description: string;
   rating: number;
   price: string;
-  features: string[];
   pros: string[];
   cons: string[];
   imageUrl: string;
