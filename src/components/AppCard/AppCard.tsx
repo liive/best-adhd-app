@@ -1,7 +1,6 @@
 import React from 'react';
 import { Download } from 'lucide-react';
 import { FeatureList } from '../FeatureList/FeatureList';
-import { RankBadge } from '../RankBadge/RankBadge';
 import type { App } from '../../types/app';
 
 interface AppCardProps {
@@ -16,20 +15,30 @@ export function AppCard({ app, rank }: AppCardProps) {
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:shadow-xl hover:-translate-y-1">
       <div className="flex flex-col sm:flex-row">
         {/* App Icon Section */}
-        <div className="w-full sm:w-1/4 p-6 flex items-center justify-center">
+        <div className="w-full sm:w-1/4 p-6 flex items-center justify-center relative">
           <div className="relative w-24 h-24 sm:w-32 sm:h-32">
             <img 
               src={imageUrl} 
               alt={name} 
               className="w-full h-full object-cover rounded-[22%] shadow-lg"
             />
+            {/* Mobile-only left badge */}
+            <div className="absolute -left-10 top-1/2 -translate-y-1/2 sm:hidden">
+              <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-lg font-bold">{rank}</span>
+              </div>
+            </div>
+            {/* Desktop-only right badge */}
+            <div className="hidden sm:block absolute -right-10 top-1/2 -translate-y-1/2">
+              <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-lg font-bold">{rank}</span>
+              </div>
+            </div>
           </div>
         </div>
         
         {/* Content Section */}
-        <div className="w-full sm:w-3/4 p-4 sm:p-6 relative">
-          <RankBadge rank={rank} />
-          
+        <div className="w-full sm:w-3/4 p-4 sm:p-6">
           <div className="mb-4">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
               <div>
