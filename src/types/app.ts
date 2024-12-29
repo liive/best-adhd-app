@@ -3,6 +3,7 @@ export interface App {
   description: string;
   rating: number;
   price: string;
+  features?: string[];  // Make features optional
   pros: string[];
   cons: string[];
   imageUrl: string;

@@ -1,17 +1,19 @@
 import React from 'react';
 import { Download } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { FeatureList } from '../FeatureList/FeatureList';
 import type { App } from '../../types/app';
 
 interface AppCardProps {
   app: App;
   rank: number;
+  isLink?: boolean;
 }
 
-export function AppCard({ app, rank }: AppCardProps) {
-  const { name, description, price, pros, cons, imageUrl, appStoreUrl } = app;
+export function AppCard({ app, rank, isLink = false }: AppCardProps) {
+  const { name, description, price, pros, cons, imageUrl } = app;
 
-  return (
+  const CardContent = () => (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:shadow-xl hover:-translate-y-1">
       <div className="flex flex-col sm:flex-row">
         {/* App Icon Section */}
@@ -42,7 +44,12 @@ export function AppCard({ app, rank }: AppCardProps) {
           <div className="mb-4">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
               <div>
-                <h3 className="text-xl font-bold text-gray-900">{name}</h3>
+                <Link 
+                  to={`/app-reviews/${name.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+                >
+                  {name}
+                </Link>
                 <p className="text-sm text-gray-500 mt-1">Productivity</p>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -61,7 +68,7 @@ export function AppCard({ app, rank }: AppCardProps) {
             <div>
               <FeatureList title="Cons" items={cons} type="cons" />
               <a
-                href={appStoreUrl}
+                href={app.appStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 flex items-center justify-center gap-2 bg-[#0066CC] text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full text-sm sm:text-base font-medium"
@@ -75,4 +82,6 @@ export function AppCard({ app, rank }: AppCardProps) {
       </div>
     </div>
   );
+
+  return <CardContent />;
 }
