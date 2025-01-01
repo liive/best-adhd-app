@@ -1,13 +1,11 @@
-import { Download } from 'lucide-react';
-import { FeatureList } from './FeatureList';
+import React from 'react';
 import type { App } from '../types/app';
 
 interface AppCardProps {
   app: App;
-  rank: number;
 }
 
-export function AppCard({ app, rank }: AppCardProps) {
+export function AppCard({ app }: AppCardProps) {
   const { name, description, rating, price, pros, cons, imageUrl, appStoreUrl } = app;
 
   return (

@@ -1,43 +1,47 @@
 import React from 'react';
 import { ChevronRight, Home } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
-interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
+export function Breadcrumbs() {
+  const location = useLocation();
+  const pathnames = location.pathname.split('/').filter(x => x);
 
-interface BreadcrumbsProps {
-  items: BreadcrumbItem[];
-}
+  const breadcrumbItems = pathnames.map((value, index) => {
+    const to = `/${pathnames.slice(0, index + 1).join('/')}`;
+    const label = value.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    return { to, label };
+  });
 
-export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <div className="bg-gray-50 border-b border-gray-200">
-      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+    <nav className="bg-gray-50 border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <ol className="flex items-center space-x-2 text-sm text-gray-500">
           <li>
-            <a href="/" className="flex items-center hover:text-blue-600 transition-colors">
+            <Link to="/" className="flex items-center hover:text-blue-600 transition-colors">
               <Home className="w-4 h-4" />
               <span className="sr-only">Home</span>
-            </a>
+            </Link>
           </li>
-          {items.map((item, index) => (
+          {breadcrumbItems.map((item, index) => (
             <li key={index} className="flex items-center">
               <ChevronRight className="w-4 h-4 mx-1 text-gray-400" />
-              {item.href ? (
-                <a
-                  href={item.href}
+              {index === breadcrumbItems.length - 1 ? (
+                <span className="text-gray-900 font-medium">{item.label}</span>
+              ) : (
+                <Link
+                  to={item.to}
                   className="hover:text-blue-600 transition-colors"
                 >
                   {item.label}
-                </a>
-              ) : (
-                <span className="text-gray-900 font-medium">{item.label}</span>
+                </Link>
               )}
             </li>
           ))}
         </ol>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
