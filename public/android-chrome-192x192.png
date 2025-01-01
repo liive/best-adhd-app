@@ -1,0 +1,1 @@
+<command>convert favicon.svg -resize 192x192 android-chrome-192x192.png</command>
