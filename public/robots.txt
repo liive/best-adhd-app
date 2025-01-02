@@ -4,11 +4,5 @@ Allow: /
 # Optimize crawling
 Crawl-delay: 1
 
-# Block specific paths
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-Disallow: /draft/
-
 # Sitemaps
 Sitemap: https://bestadhdapp.com/sitemap.xml

@@ -8,59 +8,62 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Main landing pages -->
+  <!-- App Reviews -->
   <url>
-    <loc>https://bestadhdapp.com/best-adhd-apps-2024</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://bestadhdapp.com/adhd-apps-for-adults</loc>
-    <lastmod>2024-03-19</lastmod>
+    <loc>https://bestadhdapp.com/app-reviews/forest</loc>
+    <lastmod>2024-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- Category pages -->
+  <!-- Category Pages -->
   <url>
-    <loc>https://bestadhdapp.com/best-adhd-organization-apps</loc>
-    <lastmod>2024-03-19</lastmod>
+    <loc>https://bestadhdapp.com/adhd-apps-for-adults</loc>
+    <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
+  
   <url>
     <loc>https://bestadhdapp.com/best-adhd-time-management-apps</loc>
-    <lastmod>2024-03-19</lastmod>
+    <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
-  <!-- Individual app review pages -->
   <url>
-    <loc>https://bestadhdapp.com/app-reviews/things-3</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://bestadhdapp.com/best-adhd-organization-apps</loc>
+    <lastmod>2024-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+  
+  <!-- Content Pages -->
   <url>
-    <loc>https://bestadhdapp.com/app-reviews/forest</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://bestadhdapp.com/expert-insights</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
-  <!-- Supporting content -->
   <url>
     <loc>https://bestadhdapp.com/adhd-symptoms-and-apps</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
+  
   <url>
-    <loc>https://bestadhdapp.com/medical-analysis</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://bestadhdapp.com/comparison</loc>
+    <lastmod>2024-12-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestadhdapp.com/best-adhd-apps-2024</loc>
+    <lastmod>2024-12-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
