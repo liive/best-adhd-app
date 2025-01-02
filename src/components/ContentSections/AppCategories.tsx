@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layout, Brain, Clock, Target } from 'lucide-react';
 
 export function AppCategories() {

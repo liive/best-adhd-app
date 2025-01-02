@@ -6,11 +6,10 @@ import type { App } from '../../types/app';
 interface AppCardProps {
   app: App;
   rank: number;
-  isLink?: boolean;
 }
 
-export function AppCard({ app, rank, isLink = false }: AppCardProps) {
-  const CardContent = () => (
+export function AppCard({ app, rank }: AppCardProps) {
+  return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:shadow-xl hover:-translate-y-1">
       <div className="flex flex-col sm:flex-row">
         <div className="w-full sm:w-1/4 p-6 flex items-center justify-center relative">
@@ -75,6 +74,4 @@ export function AppCard({ app, rank, isLink = false }: AppCardProps) {
       </div>
     </div>
   );
-
-  return <CardContent />;
 }
