@@ -6,11 +6,12 @@ import type { App } from '../../types/app';
 interface AppCardProps {
   app: App;
   rank: number;
+  isLink?: boolean;
 }
 
-export function AppCard({ app, rank }: AppCardProps) {
-  return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:shadow-xl hover:-translate-y-1">
+export function AppCard({ app, rank, isLink = false }: AppCardProps) {
+  const content = (
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:shadow-xl">
       <div className="flex flex-col sm:flex-row">
         <div className="w-full sm:w-1/4 p-6 flex items-center justify-center relative">
           <div className="relative w-24 h-24 sm:w-32 sm:h-32">
@@ -19,12 +20,7 @@ export function AppCard({ app, rank }: AppCardProps) {
               alt={app.name} 
               className="w-full h-full object-cover rounded-[22%] shadow-lg"
             />
-            <div className="absolute -left-10 top-1/2 -translate-y-1/2 sm:hidden">
-              <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-lg font-bold">{rank}</span>
-              </div>
-            </div>
-            <div className="hidden sm:block absolute -right-10 top-1/2 -translate-y-1/2">
+            <div className="absolute -right-10 top-1/2 -translate-y-1/2">
               <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-lg font-bold">{rank}</span>
               </div>
@@ -36,12 +32,7 @@ export function AppCard({ app, rank }: AppCardProps) {
           <div className="mb-4">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
               <div>
-                <Link 
-                  to={`/app-reviews/${app.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
-                >
-                  {app.name}
-                </Link>
+                <h3 className="text-xl font-bold text-gray-900">{app.name}</h3>
                 <p className="text-sm text-gray-500 mt-1">Productivity</p>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -74,4 +65,17 @@ export function AppCard({ app, rank }: AppCardProps) {
       </div>
     </div>
   );
+
+  if (isLink) {
+    return (
+      <Link 
+        to={`/app-reviews/${app.name.toLowerCase().replace(/\s+/g, '-')}`}
+        className="block hover:transform hover:scale-[1.02] transition-transform"
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }
