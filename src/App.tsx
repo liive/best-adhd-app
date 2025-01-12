@@ -14,8 +14,11 @@ import { OrganizationAppsPage } from './pages/OrganizationAppsPage';
 import { TimeManagementAppsPage } from './pages/TimeManagementAppsPage';
 import { AdultsAppsPage } from './pages/AdultsAppsPage';
 import { Best2024AppsPage } from './pages/Best2024AppsPage';
+import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
 
 function App() {
+  useGoogleAnalytics();
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Helmet>
