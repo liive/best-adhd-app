@@ -15,7 +15,8 @@ export function Navigation() {
     { to: '/blog/add-adhd-women', label: 'ADD & ADHD' },
     { to: '/blog/inattentive-adhd-women', label: 'Inattentive ADHD' },
     { to: '/blog/adhd-women-life-stages', label: 'ADHD Life Stages' },
-    { to: '/blog/add-women', label: 'ADD in Women' }
+    { to: '/blog/add-women', label: 'ADD in Women' },
+    { to: '/blog/high-functioning-adhd', label: 'High-Functioning ADHD' }
   ];
 
   return (

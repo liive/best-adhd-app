@@ -19,6 +19,7 @@ import { ADDAndADHDWomen } from './pages/Blog/ADDAndADHDWomen';
 import { InattentiveADHDWomen } from './pages/Blog/InattentiveADHDWomen';
 import { ADHDWomenLifeStages } from './pages/Blog/ADHDWomenLifeStages';
 import { ADDWomen } from './pages/Blog/ADDWomen';
+import { HighFunctioningADHD } from './pages/Blog/HighFunctioningADHD';
 import { ADHDTestPage } from './pages/ADHDTest/ADHDTestPage';
 import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
 
@@ -51,6 +52,7 @@ function App() {
         <Route path="/blog/inattentive-adhd-women" element={<InattentiveADHDWomen />} />
         <Route path="/blog/adhd-women-life-stages" element={<ADHDWomenLifeStages />} />
         <Route path="/blog/add-women" element={<ADDWomen />} />
+        <Route path="/blog/high-functioning-adhd" element={<HighFunctioningADHD />} />
         <Route path="/adhd-test" element={<ADHDTestPage />} />
       </Routes>
       <Footer />
