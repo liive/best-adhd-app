@@ -10,7 +10,12 @@ interface AppCardProps {
 }
 
 export function AppCard({ app, rank, isLink = false }: AppCardProps) {
-  const content = (
+  const handleAppStoreClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.open(app.appStoreUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  const cardContent = (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:shadow-xl">
       <div className="flex flex-col sm:flex-row">
         <div className="w-full sm:w-1/4 p-6 flex items-center justify-center relative">
@@ -50,15 +55,25 @@ export function AppCard({ app, rank, isLink = false }: AppCardProps) {
             </div>
             <div>
               <FeatureList title="Cons" items={app.cons} type="cons" />
-              <a
-                href={app.appStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 flex items-center justify-center gap-2 bg-[#0066CC] text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full text-sm sm:text-base font-medium"
-              >
-                <Download className="w-4 h-4" />
-                <span>View in App Store</span>
-              </a>
+              {isLink ? (
+                <button
+                  onClick={handleAppStoreClick}
+                  className="mt-4 flex items-center justify-center gap-2 bg-[#0066CC] text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full text-sm sm:text-base font-medium"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>View in App Store</span>
+                </button>
+              ) : (
+                <a
+                  href={app.appStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 flex items-center justify-center gap-2 bg-[#0066CC] text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full text-sm sm:text-base font-medium"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>View in App Store</span>
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -72,10 +87,10 @@ export function AppCard({ app, rank, isLink = false }: AppCardProps) {
         to={`/app-reviews/${app.name.toLowerCase().replace(/\s+/g, '-')}`}
         className="block hover:transform hover:scale-[1.02] transition-transform"
       >
-        {content}
+        {cardContent}
       </Link>
     );
   }
 
-  return content;
+  return cardContent;
 }

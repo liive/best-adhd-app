@@ -9,7 +9,13 @@ export function Navigation() {
     { to: '/expert-insights', label: 'Expert Insights' },
     { to: '/testimonials', label: 'User Stories' },
     { to: '/research', label: 'Research' },
-    { to: '/comparison', label: 'App Comparison' }
+    { to: '/comparison', label: 'App Comparison' },
+    { to: '/adhd-test', label: 'ADHD Test' },
+    { to: '/blog/adhd-women-symptoms', label: 'ADHD in Women' },
+    { to: '/blog/add-adhd-women', label: 'ADD & ADHD' },
+    { to: '/blog/inattentive-adhd-women', label: 'Inattentive ADHD' },
+    { to: '/blog/adhd-women-life-stages', label: 'ADHD Life Stages' },
+    { to: '/blog/add-women', label: 'ADD in Women' }
   ];
 
   return (

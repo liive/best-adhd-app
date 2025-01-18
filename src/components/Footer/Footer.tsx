@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-gray-900 mb-4">Updates</h3>
             <p className="text-sm text-gray-600">
-              Last updated: {month} {year}. Prices and features may vary. We recommend checking the app stores for the most current information.
+              Last updated: January 2025. Prices and features may vary. We recommend checking the app stores for the most current information.
             </p>
           </div>
         </div>

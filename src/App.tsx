@@ -14,6 +14,12 @@ import { OrganizationAppsPage } from './pages/OrganizationAppsPage';
 import { TimeManagementAppsPage } from './pages/TimeManagementAppsPage';
 import { AdultsAppsPage } from './pages/AdultsAppsPage';
 import { Best2024AppsPage } from './pages/Best2024AppsPage';
+import { ADHDWomenSymptoms } from './pages/Blog/ADHDWomenSymptoms';
+import { ADDAndADHDWomen } from './pages/Blog/ADDAndADHDWomen';
+import { InattentiveADHDWomen } from './pages/Blog/InattentiveADHDWomen';
+import { ADHDWomenLifeStages } from './pages/Blog/ADHDWomenLifeStages';
+import { ADDWomen } from './pages/Blog/ADDWomen';
+import { ADHDTestPage } from './pages/ADHDTest/ADHDTestPage';
 import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
 
 function App() {
@@ -40,6 +46,12 @@ function App() {
         <Route path="/best-adhd-time-management-apps" element={<TimeManagementAppsPage />} />
         <Route path="/adhd-apps-for-adults" element={<AdultsAppsPage />} />
         <Route path="/best-adhd-apps-2024" element={<Best2024AppsPage />} />
+        <Route path="/blog/adhd-women-symptoms" element={<ADHDWomenSymptoms />} />
+        <Route path="/blog/add-adhd-women" element={<ADDAndADHDWomen />} />
+        <Route path="/blog/inattentive-adhd-women" element={<InattentiveADHDWomen />} />
+        <Route path="/blog/adhd-women-life-stages" element={<ADHDWomenLifeStages />} />
+        <Route path="/blog/add-women" element={<ADDWomen />} />
+        <Route path="/adhd-test" element={<ADHDTestPage />} />
       </Routes>
       <Footer />
     </div>
