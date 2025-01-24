@@ -1,6 +1,10 @@
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+import { RelatedArticles } from '../../components/ContentSections/RelatedArticles';
 
 export function ADDAndADHDWomen() {
+  const location = useLocation();
+
   return (
     <>
       <Helmet>
@@ -181,6 +185,10 @@ export function ADDAndADHDWomen() {
               </div>
             </div>
           </section>
+
+          <div className="not-prose mt-12">
+            <RelatedArticles currentPath={location.pathname} />
+          </div>
         </article>
       </main>
     </>

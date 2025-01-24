@@ -1,6 +1,11 @@
 import { Helmet } from 'react-helmet-async';
+import { Link, useLocation } from 'react-router-dom';
+import { RelatedArticles } from '../../components/ContentSections/RelatedArticles';
+import { Brain, ArrowRight } from 'lucide-react';
 
 export function ADHDWomenSymptoms() {
+  const location = useLocation();
+
   return (
     <>
       <Helmet>
@@ -152,6 +157,40 @@ export function ADHDWomenSymptoms() {
               </div>
             </div>
           </section>
+
+          <div className="not-prose bg-blue-50 p-6 rounded-lg mb-8">
+            <h2 className="text-xl font-bold mb-4">Managing ADHD Symptoms</h2>
+            <div className="grid gap-4">
+              <Link 
+                to="/adhd-symptoms-and-apps" 
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
+              >
+                <Brain className="w-4 h-4" />
+                <span>Find apps to help manage specific ADHD symptoms</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link 
+                to="/best-adhd-time-management-apps" 
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
+              >
+                <Brain className="w-4 h-4" />
+                <span>Explore time management tools for ADHD</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link 
+                to="/expert-insights" 
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
+              >
+                <Brain className="w-4 h-4" />
+                <span>Read expert advice on ADHD management</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="not-prose">
+            <RelatedArticles currentPath={location.pathname} />
+          </div>
         </article>
       </main>
     </>
