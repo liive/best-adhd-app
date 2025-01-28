@@ -15,13 +15,29 @@ export function OrganizationAppsPage() {
   return (
     <>
       <Helmet>
-        <title>Best ADHD Organization Apps 2024 | Top-Rated Organization Tools</title>
-        <meta name="description" content="Discover the best ADHD organization apps of 2024. Expert-reviewed tools to help manage tasks, projects, and daily organization for adults with ADHD." />
+        <title>Best ADHD Organization Apps 2024 | Top Task Management Tools</title>
+        <meta 
+          name="description" 
+          content="Discover the best ADHD organization apps of 2024. Expert-reviewed tools for task management, project organization, and daily planning designed for ADHD minds."
+        />
         <link rel="canonical" href="https://bestadhdapp.com/best-adhd-organization-apps" />
       </Helmet>
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-6">Best ADHD Organization Apps 2024</h1>
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold mb-4">Best ADHD Organization Apps 2024</h1>
+          <p className="text-xl text-gray-600">
+            Expert-selected apps to help you organize tasks, manage projects, and maintain order in your daily life.
+          </p>
+        </div>
+
+        <div className="bg-blue-50 p-6 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold mb-4">Why Organization Apps Matter for ADHD</h2>
+          <p className="text-gray-700">
+            Organization apps provide external structure and visual systems that help ADHD minds manage tasks more effectively. Our selections focus on apps that reduce cognitive load while improving productivity.
+          </p>
+        </div>
+
         <AppList apps={organizationApps} />
       </main>
     </>

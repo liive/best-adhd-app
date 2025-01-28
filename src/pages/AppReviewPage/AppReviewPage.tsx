@@ -67,7 +67,6 @@ export function AppReviewPage() {
     }
   ].filter(category => category.matches);
 
-  // Additional contextual links
   const contextualLinks = [
     {
       title: "Understanding ADHD Symptoms",
@@ -89,7 +88,6 @@ export function AppReviewPage() {
     }
   ];
 
-  // Quick tips based on app category
   const getQuickTips = () => {
     switch (currentCategory) {
       case 'focus':
@@ -126,16 +124,16 @@ export function AppReviewPage() {
   return (
     <>
       <Helmet>
-        <title>{`${app.name} - Best ADHD Apps 2024`}</title>
+        <title>{`${app.name} Review 2024 | Best ADHD App Review & Rating`}</title>
         <meta 
           name="description" 
-          content={`Learn about ${app.name} for ADHD management, including features and pricing.`}
+          content={`Detailed review of ${app.name} for ADHD management. Learn about features, pricing, pros and cons, and how it helps with ADHD symptoms.`}
         />
+        <link rel="canonical" href={`https://bestadhdapp.com/app-reviews/${appName}`} />
       </Helmet>
 
       <main className="max-w-4xl mx-auto px-4 py-8">
         <article>
-          {/* Breadcrumb Navigation */}
           <nav className="mb-6">
             <ol className="flex items-center space-x-2 text-sm text-gray-500">
               <li>
@@ -154,20 +152,19 @@ export function AppReviewPage() {
             </ol>
           </nav>
 
-          {/* Hero Section */}
           <div className="bg-white p-8 rounded-xl shadow-sm mb-8">
             <div className="flex flex-col md:flex-row gap-8">
               <div className="w-full md:w-1/3 flex justify-center">
                 <img 
                   src={app.imageUrl} 
-                  alt={app.name}
+                  alt={`${app.name} app interface`}
                   className="w-48 h-48 object-cover rounded-[22%] shadow-lg"
                 />
               </div>
               
               <div className="w-full md:w-2/3">
                 <div className="flex items-center justify-between mb-4">
-                  <h1 className="text-3xl font-bold text-gray-900">{app.name}</h1>
+                  <h1 className="text-3xl font-bold text-gray-900">{app.name} Review</h1>
                   <div className="flex items-center gap-2">
                     <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
                     <span className="text-xl font-bold">{app.rating}</span>
@@ -205,7 +202,6 @@ export function AppReviewPage() {
             </div>
           </div>
 
-          {/* Features Section */}
           <section className="bg-white p-8 rounded-xl shadow-sm mb-8">
             <h2 className="text-2xl font-bold mb-6">Features Analysis</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -218,7 +214,6 @@ export function AppReviewPage() {
             </div>
           </section>
 
-          {/* Quick Tips Section */}
           <section className="bg-white p-8 rounded-xl shadow-sm mb-8">
             <div className="flex items-center gap-3 mb-6">
               <Lightbulb className="w-6 h-6 text-yellow-500" />
@@ -236,7 +231,6 @@ export function AppReviewPage() {
             </div>
           </section>
 
-          {/* Learn More Section */}
           <section className="bg-white p-8 rounded-xl shadow-sm mb-8">
             <h2 className="text-2xl font-bold mb-6">Learn More</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -260,7 +254,6 @@ export function AppReviewPage() {
             </div>
           </section>
 
-          {/* Related Apps Section */}
           {relatedApps.length > 0 && (
             <section className="bg-white p-8 rounded-xl shadow-sm">
               <h2 className="text-2xl font-bold mb-6">Similar Apps You Might Like</h2>
