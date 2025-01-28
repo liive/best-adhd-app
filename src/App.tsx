@@ -20,6 +20,8 @@ import { InattentiveADHDWomen } from './pages/Blog/InattentiveADHDWomen';
 import { ADHDWomenLifeStages } from './pages/Blog/ADHDWomenLifeStages';
 import { ADDWomen } from './pages/Blog/ADDWomen';
 import { HighFunctioningADHD } from './pages/Blog/HighFunctioningADHD';
+import { SocialEnergyManagement } from './pages/Blog/SocialEnergyManagement';
+import { ADHDOverwhelm } from './pages/Blog/ADHDOverwhelm';
 import { ADHDTestPage } from './pages/ADHDTest/ADHDTestPage';
 import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
 
@@ -53,6 +55,8 @@ function App() {
         <Route path="/blog/adhd-women-life-stages" element={<ADHDWomenLifeStages />} />
         <Route path="/blog/add-women" element={<ADDWomen />} />
         <Route path="/blog/high-functioning-adhd" element={<HighFunctioningADHD />} />
+        <Route path="/blog/social-energy-management" element={<SocialEnergyManagement />} />
+        <Route path="/blog/adhd-overwhelm" element={<ADHDOverwhelm />} />
         <Route path="/adhd-test" element={<ADHDTestPage />} />
       </Routes>
       <Footer />
