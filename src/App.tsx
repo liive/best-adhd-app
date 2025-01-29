@@ -22,7 +22,10 @@ import { ADDWomen } from './pages/Blog/ADDWomen';
 import { HighFunctioningADHD } from './pages/Blog/HighFunctioningADHD';
 import { SocialEnergyManagement } from './pages/Blog/SocialEnergyManagement';
 import { ADHDOverwhelm } from './pages/Blog/ADHDOverwhelm';
+import { CulturalADHDImpact } from './pages/Blog/CulturalADHDImpact';
+import { GenderDifferencesADHD } from './pages/Blog/GenderDifferencesADHD';
 import { ADHDTestPage } from './pages/ADHDTest/ADHDTestPage';
+import { ADHDMenstrualCycle } from './pages/Blog/ADHDMenstrualCycle';
 import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
 
 function App() {
@@ -57,7 +60,10 @@ function App() {
         <Route path="/blog/high-functioning-adhd" element={<HighFunctioningADHD />} />
         <Route path="/blog/social-energy-management" element={<SocialEnergyManagement />} />
         <Route path="/blog/adhd-overwhelm" element={<ADHDOverwhelm />} />
+        <Route path="/blog/cultural-adhd-impact" element={<CulturalADHDImpact />} />
+        <Route path="/blog/gender-differences-adhd" element={<GenderDifferencesADHD />} />
         <Route path="/adhd-test" element={<ADHDTestPage />} />
+        <Route path="/blog/adhd-menstrual-cycle" element={<ADHDMenstrualCycle />} />
       </Routes>
       <Footer />
     </div>

@@ -24,7 +24,10 @@ export function Navigation() {
     { to: '/blog/add-women', label: 'ADD in Women' },
     { to: '/blog/high-functioning-adhd', label: 'High-Functioning ADHD' },
     { to: '/blog/social-energy-management', label: 'Managing Social Energy' },
-    { to: '/blog/adhd-overwhelm', label: 'Managing Overwhelm' }
+    { to: '/blog/adhd-overwhelm', label: 'Managing Overwhelm' },
+    { to: '/blog/cultural-adhd-impact', label: 'Cultural Impact on ADHD' },
+    { to: '/blog/gender-differences-adhd', label: 'ADHD: Women vs Men' },
+    { to: '/blog/adhd-menstrual-cycle', label: 'ADHD & Menstrual Cycle' }
   ];
 
   return (
