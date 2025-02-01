@@ -7,6 +7,7 @@ export function Navigation() {
 
   const links = [
     { to: '/', label: 'Home' },
+    { to: '/best-adhd-apps', label: 'Best Apps' },
     { to: '/adhd-symptoms-and-apps', label: 'Symptoms & Apps' },
     { to: '/medical-analysis', label: 'Medical Analysis' },
     { to: '/expert-insights', label: 'Expert Insights' },
@@ -17,7 +18,12 @@ export function Navigation() {
   ];
 
   const womenSubMenu = [
+    { to: '/blog/signs-of-adhd', label: 'Signs of ADHD' },
     { to: '/blog/adhd-women-symptoms', label: 'ADHD in Women' },
+    { to: '/blog/adhd-female-symptoms', label: 'Female ADHD Symptoms' },
+    { to: '/blog/adhd-women-signs', label: 'Signs in Women' },
+    { to: '/blog/adhd-women-identification', label: 'Identifying ADHD' },
+    { to: '/blog/adhd-women-signs-symptoms', label: 'Signs & Symptoms' },
     { to: '/blog/add-adhd-women', label: 'ADD & ADHD' },
     { to: '/blog/inattentive-adhd-women', label: 'Inattentive ADHD' },
     { to: '/blog/adhd-women-life-stages', label: 'ADHD Life Stages' },

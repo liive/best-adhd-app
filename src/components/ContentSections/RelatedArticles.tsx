@@ -14,106 +14,106 @@ interface RelatedArticlesProps {
 
 export function RelatedArticles({ currentPath }: RelatedArticlesProps) {
   const allArticles: Record<string, RelatedArticle[]> = {
+    '/blog/signs-of-adhd': [
+      {
+        title: 'ADHD Symptoms in Women',
+        path: '/blog/adhd-women-symptoms',
+        description: 'Understanding how ADHD presents uniquely in women'
+      },
+      {
+        title: 'Female ADHD Symptoms',
+        path: '/blog/adhd-female-symptoms',
+        description: 'Detailed guide to ADHD symptoms in females'
+      },
+      {
+        title: 'Signs of ADHD in Women',
+        path: '/blog/adhd-women-signs',
+        description: 'Recognizing ADHD signs specific to women'
+      }
+    ],
     '/blog/adhd-women-symptoms': [
       {
-        title: 'ADD and ADHD in Women',
-        path: '/blog/add-adhd-women',
-        description: 'Understanding the differences between ADD and ADHD presentations in women'
+        title: 'Signs of ADHD',
+        path: '/blog/signs-of-adhd',
+        description: 'Common signs and indicators of ADHD'
       },
       {
-        title: 'Inattentive ADHD in Women',
-        path: '/blog/inattentive-adhd-women',
-        description: 'Deep dive into the predominantly inattentive type of ADHD'
+        title: 'Female ADHD Symptoms',
+        path: '/blog/adhd-female-symptoms',
+        description: 'Understanding symptoms specific to women'
       },
       {
-        title: 'ADHD Through Different Life Stages',
-        path: '/blog/adhd-women-life-stages',
-        description: 'How ADHD symptoms evolve throughout a woman\'s life'
+        title: 'How to Identify ADHD',
+        path: '/blog/adhd-women-identification',
+        description: 'Guide to identifying ADHD in women'
       }
     ],
-    '/blog/add-adhd-women': [
+    '/blog/adhd-female-symptoms': [
+      {
+        title: 'Signs of ADHD in Women',
+        path: '/blog/adhd-women-signs',
+        description: 'Key signs of ADHD in women'
+      },
+      {
+        title: 'ADHD Identification Guide',
+        path: '/blog/adhd-women-identification',
+        description: 'How to identify ADHD as a woman'
+      },
+      {
+        title: 'Signs and Symptoms',
+        path: '/blog/adhd-women-signs-symptoms',
+        description: 'Comprehensive guide to ADHD signs and symptoms'
+      }
+    ],
+    '/blog/adhd-women-signs': [
       {
         title: 'ADHD Symptoms in Women',
         path: '/blog/adhd-women-symptoms',
-        description: 'Comprehensive guide to recognizing ADHD signs in women'
+        description: 'Understanding female ADHD symptoms'
       },
       {
-        title: 'High-Functioning ADHD',
-        path: '/blog/high-functioning-adhd',
-        description: 'Understanding high-functioning ADHD presentations'
+        title: 'Identifying ADHD',
+        path: '/blog/adhd-women-identification',
+        description: 'How to know if you have ADHD'
       },
       {
-        title: 'ADHD Through Life Stages',
-        path: '/blog/adhd-women-life-stages',
-        description: 'How ADHD manifests across different life phases'
+        title: 'Signs and Symptoms Guide',
+        path: '/blog/adhd-women-signs-symptoms',
+        description: 'Complete guide to ADHD signs and symptoms'
       }
     ],
-    '/blog/inattentive-adhd-women': [
+    '/blog/adhd-women-identification': [
       {
-        title: 'ADHD Symptoms in Women',
+        title: 'ADHD Signs in Women',
+        path: '/blog/adhd-women-signs',
+        description: 'Understanding ADHD signs in women'
+      },
+      {
+        title: 'Female ADHD Symptoms',
+        path: '/blog/adhd-female-symptoms',
+        description: 'Common symptoms in women with ADHD'
+      },
+      {
+        title: 'Signs and Symptoms',
+        path: '/blog/adhd-women-signs-symptoms',
+        description: 'Comprehensive symptoms guide'
+      }
+    ],
+    '/blog/adhd-women-signs-symptoms': [
+      {
+        title: 'ADHD in Women',
         path: '/blog/adhd-women-symptoms',
-        description: 'Complete guide to female ADHD symptoms'
+        description: 'Understanding ADHD in women'
       },
       {
-        title: 'ADD in Women',
-        path: '/blog/add-women',
-        description: 'Understanding ADD presentation in women'
+        title: 'Identifying ADHD',
+        path: '/blog/adhd-women-identification',
+        description: 'How to identify ADHD as a woman'
       },
       {
-        title: 'High-Functioning ADHD',
-        path: '/blog/high-functioning-adhd',
-        description: 'Insights into high-functioning ADHD'
-      }
-    ],
-    '/blog/adhd-women-life-stages': [
-      {
-        title: 'ADHD Symptoms in Women',
-        path: '/blog/adhd-women-symptoms',
-        description: 'Understanding core ADHD symptoms in women'
-      },
-      {
-        title: 'High-Functioning ADHD',
-        path: '/blog/high-functioning-adhd',
-        description: 'Managing high-functioning ADHD across life stages'
-      },
-      {
-        title: 'ADD & ADHD in Women',
-        path: '/blog/add-adhd-women',
-        description: 'Different ADHD presentations in women'
-      }
-    ],
-    '/blog/add-women': [
-      {
-        title: 'Inattentive ADHD in Women',
-        path: '/blog/inattentive-adhd-women',
-        description: 'Deep dive into inattentive type ADHD'
-      },
-      {
-        title: 'ADHD Through Life Stages',
-        path: '/blog/adhd-women-life-stages',
-        description: 'How ADD/ADHD evolves with age'
-      },
-      {
-        title: 'High-Functioning ADHD',
-        path: '/blog/high-functioning-adhd',
-        description: 'Understanding high-functioning presentations'
-      }
-    ],
-    '/blog/high-functioning-adhd': [
-      {
-        title: 'ADHD Symptoms in Women',
-        path: '/blog/adhd-women-symptoms',
-        description: 'Recognizing ADHD symptoms in women'
-      },
-      {
-        title: 'Inattentive ADHD',
-        path: '/blog/inattentive-adhd-women',
-        description: 'Understanding inattentive ADHD presentation'
-      },
-      {
-        title: 'ADHD Life Stages',
-        path: '/blog/adhd-women-life-stages',
-        description: 'Managing ADHD through different life phases'
+        title: 'Female ADHD Symptoms',
+        path: '/blog/adhd-female-symptoms',
+        description: 'Symptoms specific to women'
       }
     ]
   };
@@ -123,7 +123,7 @@ export function RelatedArticles({ currentPath }: RelatedArticlesProps) {
   if (relatedArticles.length === 0) return null;
 
   return (
-    <section className="bg-white p-6 rounded-lg shadow-sm">
+    <section className="bg-white p-6 rounded-lg shadow-sm mt-12">
       <div className="flex items-center gap-2 mb-6">
         <BookOpen className="w-5 h-5 text-blue-600" />
         <h2 className="text-xl font-bold">Related Articles</h2>
