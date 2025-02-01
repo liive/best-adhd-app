@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-import { Brain, Heart, AlertCircle, Clock } from 'lucide-react';
+import { Brain, Heart, AlertCircle, Clock, Locate as useLocation } from 'lucide-react';
 import { RelatedArticles } from '../../components/ContentSections/RelatedArticles';
 
 export function ADHDFemaleSymptoms() {
