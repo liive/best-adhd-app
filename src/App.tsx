@@ -31,6 +31,7 @@ import { ADHDFemaleSymptoms } from './pages/Blog/ADHDFemaleSymptoms';
 import { ADHDWomenSigns } from './pages/Blog/ADHDWomenSigns';
 import { ADHDWomenIdentification } from './pages/Blog/ADHDWomenIdentification';
 import { ADHDWomenSignsSymptoms } from './pages/Blog/ADHDWomenSignsSymptoms';
+import { DopamineMenu } from './pages/Blog/DopamineMenu';
 import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
         <Route path="/blog/adhd-women-signs" element={<ADHDWomenSigns />} />
         <Route path="/blog/adhd-women-identification" element={<ADHDWomenIdentification />} />
         <Route path="/blog/adhd-women-signs-symptoms" element={<ADHDWomenSignsSymptoms />} />
+        <Route path="/blog/dopamine-menu" element={<DopamineMenu />} />
       </Routes>
       <Footer />
     </div>

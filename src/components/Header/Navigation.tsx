@@ -14,7 +14,8 @@ export function Navigation() {
     { to: '/testimonials', label: 'User Stories' },
     { to: '/research', label: 'Research' },
     { to: '/comparison', label: 'App Comparison' },
-    { to: '/adhd-test', label: 'ADHD Test' }
+    { to: '/adhd-test', label: 'ADHD Test' },
+    { to: '/blog/dopamine-menu', label: 'Dopamine Menu' }
   ];
 
   const womenSubMenu = [
