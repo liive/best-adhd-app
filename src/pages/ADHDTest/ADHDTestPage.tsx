@@ -25,6 +25,11 @@ export function ADHDTestPage() {
           content="Take our comprehensive ADHD test for women. This free assessment helps identify common ADHD symptoms in women and provides insights for seeking professional evaluation."
         />
         <link rel="canonical" href="https://bestadhdapp.com/adhd-test" />
+        <script>
+          {`
+            gtag('event', 'conversion_event_page_view_1', {});
+          `}
+        </script>
       </Helmet>
 
       <main className="max-w-4xl mx-auto px-4 py-8">

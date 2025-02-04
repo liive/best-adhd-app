@@ -16,6 +16,11 @@ export function SymptomsPage() {
           content="Match your ADHD symptoms with the most effective apps. Expert guide to finding the right digital tools for managing specific ADHD challenges and symptoms."
         />
         <link rel="canonical" href="https://bestadhdapp.com/adhd-symptoms-and-apps" />
+        <script>
+          {`
+            gtag('event', 'conversion_event_page_view_1', {});
+          `}
+        </script>
       </Helmet>
 
       <main className="max-w-4xl mx-auto px-4 py-8">

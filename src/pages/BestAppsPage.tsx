@@ -21,6 +21,11 @@ export function BestAppsPage() {
           content="Discover the best ADHD apps. Expert-reviewed recommendations for focus, organization, and productivity. Find the perfect app for your ADHD management needs."
         />
         <link rel="canonical" href="https://bestadhdapp.com/best-adhd-apps" />
+        <script>
+          {`
+            gtag('event', 'conversion_event_page_view_1', {});
+          `}
+        </script>
       </Helmet>
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">

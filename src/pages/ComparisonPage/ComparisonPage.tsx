@@ -15,6 +15,11 @@ export function ComparisonPage() {
           content="Compare the best ADHD apps side-by-side. Detailed comparison of features, pricing, and ratings to help you choose the right ADHD management app for your needs."
         />
         <link rel="canonical" href="https://bestadhdapp.com/comparison" />
+        <script>
+          {`
+            gtag('event', 'conversion_event_page_view_1', {});
+          `}
+        </script>
       </Helmet>
 
       <main className="max-w-7xl mx-auto px-4 py-8">

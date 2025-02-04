@@ -14,6 +14,11 @@ export function HomePage() {
           content="Learn about ADHD, its symptoms, and effective management strategies. Discover expert-reviewed digital tools and resources to help you thrive with ADHD."
         />
         <link rel="canonical" href="https://bestadhdapp.com" />
+        <script>
+          {`
+            gtag('event', 'conversion_event_page_view_1', {});
+          `}
+        </script>
       </Helmet>
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
